@@ -181,7 +181,7 @@ with st.sidebar:
     theta2 = st.number_input(r'$\theta_2$:', -10., 10., 3., step = 0.1)
 
     st.write("##### Adicionando Ruído as Np amostras: :\ny = X'$\\Theta$,  $x_{ij}$' = $x_{ij}$ + $\sigma$N(0,1) ")
-    noise  = st.number_input(r'$\sigma$:', 0.0, 10.0, 0.0, step = 0.01)
+    noise  = st.number_input(r'$\sigma$:', 0.0, 10.0, 0.01, step = 0.01)
 
     st.write("### Chute Inicial ")
     i_t1 = st.number_input(r'$\theta_1(0)$:', -10.0, 10.0, +7.5, step = 0.1)
@@ -240,7 +240,7 @@ with tab1:
     with col2:
         st.write(r"""
         ##### Testes Sugeridos 
-        1. testar os valores $\sigma$ = 0, 0.5 e 1.0 para notar que ruídos distanciam as soluções MMQ e DG da solução ótima, levam ambas as soluções
+        1. testar os valores $\sigma$ = 0.0, 0.5 e 1.0 para notar que ruídos distanciam as soluções MMQ e DG da solução ótima, levam ambas as soluções
            para mais próximo da origem e adicionam dispersão às últimas iterações da solução DG.    
         2. fixando $\sigma$ = 1.0, 'Tamanho do Lote' = 1 e removendo o 'Fixed Seed',  entrar com 1 no campo 'Tamanho do Lote' várias vezes para observar como ao 
            fim de cada cálculo a solução DG é dispersa, ou aleatória, em torno da solução MMQ (mantida), um comportamento típico de regularizações por 
